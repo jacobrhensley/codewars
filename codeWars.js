@@ -21,3 +21,24 @@ function arrayDiff(a, b) {
     let difference = a.filter(x => !b.includes(x));
     return difference
   }
+
+//   Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+    let characterArray = str.split("")
+         return characterArray.map(character => {
+             if(/[aeiouAEIOU]/.test(character)){
+                character = ""
+             } else {return character}
+         }).join("")
+    str = characterArray;
+    return str;
+  }
