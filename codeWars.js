@@ -71,3 +71,44 @@ function spinWords(words){
    
    return arr.join(' ');
  }
+
+
+
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+// Note: If the number is a multiple of both 3 and 5, only count it once. Also, if a number is negative, return 0(for languages that do have them)
+
+
+
+
+ function solution(number){
+  let count = 0;
+  for(let i = 0; i < number; i++){
+    if(i % 3 == 0 || i % 5 == 0){
+        count += i;
+    }
+  }
+  return count;
+}
+
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+function createPhoneNumber(numbers){
+  var format = "(xxx) xxx-xxxx";
+  
+  for(var i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}
+
+// OR
+
+function createPhoneNumber(numbers){
+  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
+}
