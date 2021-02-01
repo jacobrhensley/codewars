@@ -112,3 +112,14 @@ function createPhoneNumber(numbers){
 function createPhoneNumber(numbers){
   return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
 }
+
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+
+var countBits = function(n) {
+  return n.toString(2).split('').reduce(function(count, el) {
+      return count + (el == "1");
+  }, 0); 
+};
+
