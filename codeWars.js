@@ -155,4 +155,20 @@ statement += names[0] + ", " + names[1] + " and " + (names.length - 2) + " other
 }
 
 
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+
+function findOdd(A) {
+  let m = {};
+
+  A.forEach(e => (m[e] in m) ? m[e] += 1 : m[e] = 1);
+  for (k in m) {
+    if (m[k] % 2 != 0) return parseInt(k);
+  }
+  return 0;
+}
+
+
 
